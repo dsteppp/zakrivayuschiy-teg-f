@@ -16,6 +16,7 @@
   align-items: center;
   color: var(--main-text-color);
   font-family: var(--main-font, sans-serif);
+  font-size: var(--main-font-size);
   background-image: var(--bg-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -37,7 +38,7 @@
   align-items: center;
   gap: 20px;
   width: var(--content-width);
-  margin: 100px 0;
+  margin: 98px 0;
   border: var(--content-border);
   padding: clamp(120px, 10vh, 130px) 0;
   background-color: var(--content-bg-color);
@@ -52,4 +53,51 @@
   font-size: clamp(14px, 2vw, 23px);
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.content_card {
+  width: var(--content-width);
+  border: var(--content-border);
+  background-color: var(--content-bg-color);
+}
+
+.card__title {
+  border-bottom: var(--content-border);
+  font-size: var(--main-font-size);
+  font-variation-settings: 'wght' var(--card-title-weight);
+}
+
+.img_and_label {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 696px;
+  overflow: hidden;
+}
+
+.card__label {
+  position: absolute;
+}
+
+.card__image {
+  display: block;
+  object-fit: cover;
+}
+
+.card__text_section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-top: var(--content-border);
+}
+
+.card__text {
+  line-height: 1.17;
 }
