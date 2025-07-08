@@ -12,6 +12,9 @@
 
 .page {
   font-family: var(--main-font, sans-serif);
+  background-image: var(--bg-gradient);
+  background-size: cover;
+  background-attachment: fixed;
   font-variation-settings: 'wght' var(--card-text-weight);
   min-inline-size: 320px;
   min-block-size: 100dvb;
