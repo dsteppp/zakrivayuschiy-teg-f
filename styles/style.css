@@ -11,6 +11,10 @@
 */
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--main-text-color);
   font-family: var(--main-font, sans-serif);
   background-image: var(--bg-gradient);
   background-size: cover;
@@ -18,4 +22,34 @@
   font-variation-settings: 'wght' var(--card-text-weight);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+}
+
+.page__logo {
+  font-family: var(--accent-font, sans-serif);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: var(--content-width);
+  margin: 100px 0;
+  border: var(--content-border);
+  padding: clamp(120px, 10vh, 130px) 0;
+  background-color: var(--content-bg-color);
+}
+
+.header__logo {
+  font-size: clamp(49px, 7vw, 65px);
+}
+
+.header__title {
+  font-family: var(--accent-font, sans-serif);
+  font-size: clamp(14px, 2vw, 23px);
+  text-transform: uppercase;
+  white-space: nowrap;
 }
