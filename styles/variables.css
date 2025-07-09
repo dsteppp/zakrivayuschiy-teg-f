@@ -15,4 +15,5 @@
   --content-width: clamp(375px, 80vw, 700px);
   --content-bg-color: #fff;
   --content-border: 2px solid #000;
+  --animation-fill-color: #ff0000;
 }

@@ -198,12 +198,13 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 5px;
 }
 
 .card__icon-button {
   border: 2px solid transparent;
-  padding: 2px 4px 0;
+  height: 36px;
+  padding: 0 0 34px;
   background-color: transparent; 
   transition: border-color 0.3s ease;
   cursor: pointer;
@@ -214,15 +215,20 @@
 }
 
 .card__icon-button:focus-visible {
-  border-color: var(--accent-color);
+  border-color: var(--main-text-color);
 }
 
 .like-icon {
-  width: 27px;
-  height: 24px;
+  width: 39px;
+  height: 36px;
+}
+
+.heart_sparks {
+  opacity: 0;
 }
 
 .card__like-button {
+  height: fit-content;
   padding: 6px 35px;
 }
 
