@@ -157,17 +157,64 @@
   line-height: 1.17;
 }
 
+.content__button {
+  position: relative;
+  overflow: hidden;
+  color: var(--content-bg-color);
+  transition: color 0.5s ease-in-out;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.content__button .button__text,
+.content__button svg {
+  position: relative;
+  z-index: 1;
+  color: var(--content-bg-color);
+  mix-blend-mode: difference;
+}
+
+.content__button:focus {
+  box-shadow: 2px 2px 0 var(--main-text-color);
+  outline: none;
+}
+
+.content__button::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 0;
+  background-color: var(--main-text-color);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+.content__button:hover::before {
+  transform: translateX(0);
+}
+
 .icon_and_button {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 7px;
 }
 
 .card__icon-button {
-  border: none;
-  padding: 7px 1px 2px;
+  border: 2px solid transparent;
+  padding: 2px 5px 0;
   background-color: transparent; 
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
 }
 
 .like-icon {
@@ -200,6 +247,7 @@
 .save-mem-btn__icon {
   width: 21px;
   height: 21px;
+  fill: var(--content-bg-color);
 }
 
 .page__dialog {
