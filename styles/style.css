@@ -27,7 +27,7 @@
 
 .page__logo {
   font-family: var(--accent-font, sans-serif);
-  font-size: 14px;
+  font-size: var(--min-font-size);
   text-transform: uppercase;
 }
 
@@ -50,7 +50,7 @@
 
 .header__title {
   font-family: var(--accent-font, sans-serif);
-  font-size: clamp(14px, 2vw, 23px);
+  font-size: clamp(var(--min-font-size), 2vw, 23px);
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -109,4 +109,19 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+.content__button {
+  border: var(--content-border);
+  background-color: var(--content-bg-color);
+}
+
+.button__text {
+  font-family: var(--accent-font, sans-serif);
+  font-size: var(--min-font-size);
+}
+
+.save-mem-btn {
+  display: flex;
+  flex-direction: row;
 }

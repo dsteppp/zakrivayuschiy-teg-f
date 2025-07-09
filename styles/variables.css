@@ -3,6 +3,7 @@
 :root {
   --main-font: 'Inter';
   --main-font-size: 18px;
+  --min-font-size: 14px;
   --accent-font: 'PressStart2P-Regular';
   --card-title-weight: 715;
   --card-text-weight: 410;
