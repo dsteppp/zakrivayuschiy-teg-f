@@ -96,11 +96,10 @@
   mix-blend-mode: hard-light;
 }
 
-@supports (-webkit-text-stroke: 1px var(--content-bg-color)) or (text-stroke: 1px var(--content-bg-color)) {
+@supports (-webkit-text-stroke: 1px var(--content-bg-color)) {
   .card__label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--content-bg-color);
-    text-stroke: 1px var(--content-bg-color);
   }
 }
 
