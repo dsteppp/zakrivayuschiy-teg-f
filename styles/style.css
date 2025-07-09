@@ -169,7 +169,54 @@
   height: 21px;
 }
 
-@media (max-width: 376px) {
+.page__dialog {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: clamp(341px, 80vw, 353px);
+  height: 191px;
+  border: var(--content-border);
+  padding: 30px;
+}
+
+.page__dialog:not([open]) {
+  display: none;
+  pointer-events: none;
+}
+
+.page__dialog::backdrop {
+  opacity: 0.75;
+  background-color: var(--main-text-color);
+}
+
+.dialog__close-button {
+  width: 100%;
+  border: var(--content-border);
+  padding: 5px 0;
+  text-align: center;
+  background-color: var(--content-bg-color);
+}
+
+.dialog_icon_and_text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog__icon {
+  width: 75px;
+  height: 75px;
+}
+
+.dialog__text {
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+@media (width <= 375px), (max-width: 376px) {
   .header {
     margin: 100px 0;
   }
@@ -181,5 +228,9 @@
   .save-mem-btn__icon {
     width: 28px;
     height: 28px;
+  }
+
+  .page__dialog {
+    padding: 30px 40px;
   }
 }

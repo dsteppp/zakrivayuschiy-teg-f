@@ -346,16 +346,36 @@
           </div>
         </section>
       </article>
-      <button class="content__button save-mem-btn">
-        <svg
-          class="save-mem-btn__icon"
-          aria-hidden="true"
-        >
+      <button
+        class="content__button save-mem-btn"
+        type="button"
+        onclick="window['dialog-id'].showModal();"
+        aria-controls="dialog-id"
+      >
+        <svg class="save-mem-btn__icon" aria-hidden="true">
           <use href="./svg/icons.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
     </main>
+
+    <dialog id="dialog-id" class="page__dialog">
+      <div class="dialog_icon_and_text">
+        <svg class="dialog__icon" aria-hidden="true">
+          <use href="./svg/icons.svg#floppy"></use>
+        </svg>
+        <span class="button__text dialog__text"
+          >Вставьте дискету, чтобы продолжить</span
+        >
+      </div>
+      <button
+        class="dialog__close-button"
+        type="button"
+        onclick="window['dialog-id'].close();"
+      >
+        <span class="button__text dialog__text">ок</span>
+      </button>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
