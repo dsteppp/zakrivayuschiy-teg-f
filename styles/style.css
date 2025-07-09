@@ -86,6 +86,7 @@
 
 .card__label {
   position: absolute;
+  z-index: 1;
   margin: 25px;
   opacity: 0.5;
   text-shadow: 
@@ -109,6 +110,38 @@
   height: 100%;
   object-fit: cover;
   object-position: right center;
+}
+
+.filter_brightness {
+  filter: brightness(200%);
+}
+
+.filter_contrast {
+  filter: contrast(20%);
+}
+
+.filter_blur {
+  filter: blur(0.5rem);
+}
+
+.filter_opacity {
+  filter: opacity(0.8);
+}
+
+.filter_grayscale {
+  filter: grayscale(0.8);
+}
+
+.filter_saturate {
+  filter: saturate(208%);
+}
+
+.filter_hue-rotate {
+  filter: hue-rotate(-90deg);
+}
+
+.filter_sepia-invert {
+  filter: sepia(80%) invert(0.9);
 }
 
 .card__content_section {
