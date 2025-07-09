@@ -86,6 +86,22 @@
 
 .card__label {
   position: absolute;
+  margin: 25px;
+  opacity: 0.5;
+  text-shadow: 
+    1px 0 0 var(--content-bg-color), 
+    0 1px 0 var(--content-bg-color), 
+    -1px 0 0 var(--content-bg-color), 
+    0 -1px 0 var(--content-bg-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports (-webkit-text-stroke: 1px var(--content-bg-color)) or (text-stroke: 1px var(--content-bg-color)) {
+  .card__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--content-bg-color);
+    text-stroke: 1px var(--content-bg-color);
+  }
 }
 
 .card__image {
