@@ -38,7 +38,7 @@
   align-items: center;
   gap: 20px;
   width: var(--content-width);
-  margin: 98px 0;
+  margin: 97px 0 98px;
   border: var(--content-border);
   padding: clamp(120px, 10vh, 130px) 0;
   background-color: var(--content-bg-color);
@@ -70,6 +70,7 @@
 
 .card__title {
   border-bottom: var(--content-border);
+  padding: 4px 10px;
   font-size: var(--main-font-size);
   font-variation-settings: 'wght' var(--card-title-weight);
 }
@@ -99,9 +100,11 @@
   flex-direction: column;
   gap: 25px;
   border-top: var(--content-border);
+  padding: 25px;
 }
 
 .card__text {
+  padding: 0 1px 0 0;
   line-height: 1.17;
 }
 
@@ -109,6 +112,17 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  gap: 12px;
+}
+
+.card__icon-button {
+  border: none;
+  padding: 7px 1px 2px;
+  background-color: transparent; 
+}
+
+.card__like-button {
+  padding: 6px 35px;
 }
 
 .content__button {
@@ -124,4 +138,10 @@
 .save-mem-btn {
   display: flex;
   flex-direction: row;
+}
+
+@media (max-width: 376px) {
+  .header {
+    margin: 100px 0;
+  }
 }
