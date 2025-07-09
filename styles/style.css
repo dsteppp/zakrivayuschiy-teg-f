@@ -159,8 +159,10 @@
 
 .content__button {
   position: relative;
+  border: var(--content-border);
   overflow: hidden;
   color: var(--content-bg-color);
+  background-color: var(--content-bg-color);
   transition: color 0.5s ease-in-out, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -181,10 +183,10 @@
 .content__button::before {
   content: "";
   position: absolute;
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
-  left: 0; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;  
   z-index: 0;
   background-color: var(--main-text-color);
   transition: transform 0.5s ease-in-out;
@@ -204,10 +206,10 @@
 }
 
 .card__icon-button {
-  height: 36px; 
-  border: 2px solid transparent; 
+  height: 36px;
+  border: 2px solid transparent;
   padding: 0 0 34px;
-  background-color: transparent; 
+  background-color: transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
 }
@@ -230,13 +232,8 @@
 }
 
 .card__like-button {
-  height: fit-content; 
+  height: fit-content;
   padding: 6px 35px;
-}
-
-.content__button {
-  border: var(--content-border);
-  background-color: var(--content-bg-color);
 }
 
 .button__text {
