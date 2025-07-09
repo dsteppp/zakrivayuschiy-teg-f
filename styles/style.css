@@ -202,8 +202,8 @@
 }
 
 .card__icon-button {
-  border: 2px solid transparent;
   height: 36px;
+  border: 2px solid transparent;
   padding: 0 0 34px;
   background-color: transparent; 
   transition: border-color 0.3s ease;
