@@ -198,12 +198,12 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 7px;
+  gap: 8px;
 }
 
 .card__icon-button {
   border: 2px solid transparent;
-  padding: 2px 5px 0;
+  padding: 2px 4px 0;
   background-color: transparent; 
   transition: border-color 0.3s ease;
   cursor: pointer;
