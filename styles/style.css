@@ -41,7 +41,7 @@
   width: var(--content-width);
   margin: 97px 0 98px;
   border: var(--content-border);
-  padding: clamp(120px, 10vh, 130px) 0;
+  padding: clamp(120px, 10vw, 130px) 0;
   background-color: var(--content-bg-color);
 }
 
@@ -180,7 +180,7 @@
   mix-blend-mode: difference;
 }
 
-.content__button:focus {
+.content__button:focus-visible {
   box-shadow: 2px 2px 0 var(--main-text-color);
   outline: none;
 }
@@ -236,7 +236,8 @@
 }
 
 .card__like-button {
-  padding: 6px 35px;
+  width: 130px;
+  padding: 6px 0;
 }
 
 .button__text {
@@ -281,7 +282,7 @@
 .dialog__close-button {
   width: 100%;
   border: var(--content-border);
-  padding: 5px 0;
+  padding: 6px 0;
   text-align: center;
   background-color: var(--content-bg-color);
 }
