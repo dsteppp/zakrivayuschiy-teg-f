@@ -27,7 +27,7 @@
 }
 
 .page__logo {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: var(--min-font-size);
   text-transform: uppercase;
 }
@@ -45,12 +45,16 @@
   background-color: var(--content-bg-color);
 }
 
+.header__link {
+  text-decoration: none;
+}
+
 .header__logo {
   font-size: clamp(49px, 7vw, 65px);
 }
 
 .header__title {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: clamp(var(--min-font-size), 2vw, 23px);
   text-transform: uppercase;
   white-space: nowrap;
@@ -60,7 +64,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: 49px;
 }
 
 .content_card {
@@ -80,12 +84,14 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
-  height: clamp(371px, 50vw, 696px);
   overflow: hidden;
+  aspect-ratio: 1 / 1;
 }
 
 .card__label {
   position: absolute;
+  top: 0;
+  right: 0;
   z-index: 1;
   margin: 25px;
   opacity: 0.5;
@@ -97,17 +103,16 @@
   mix-blend-mode: hard-light;
 }
 
-@supports (-webkit-text-stroke: 1px var(--content-bg-color)) {
+@supports (-webkit-text-stroke: 1px var(--content-bg-color)) or (text-stroke: 1px var(--content-bg-color)) {
   .card__label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--content-bg-color);
+    text-stroke: 1px var(--content-bg-color);
   }
 }
 
 .card__image {
   display: block;
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: right center;
 }
@@ -206,9 +211,8 @@
 }
 
 .card__icon-button {
-  height: 36px;
   border: 2px solid transparent;
-  padding: 0 0 34px;
+  padding: 0;
   background-color: transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
@@ -224,7 +228,7 @@
 
 .like-icon {
   width: 39px;
-  height: 36px;
+  height: 30px;
 }
 
 .heart_sparks {
@@ -232,12 +236,11 @@
 }
 
 .card__like-button {
-  height: fit-content;
   padding: 6px 35px;
 }
 
 .button__text {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: var(--min-font-size);
 }
 
@@ -259,8 +262,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 28px;
   width: clamp(341px, 80vw, 353px);
-  height: 191px;
   border: var(--content-border);
   padding: 30px;
 }
