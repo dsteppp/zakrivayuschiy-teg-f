@@ -308,6 +308,10 @@
     margin: 100px 0;
   }
 
+  .card__label {
+    margin: 25px 13px;
+  }
+
   .save-mem-btn {
     flex-direction: column;
   }
